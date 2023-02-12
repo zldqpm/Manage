@@ -1,4 +1,5 @@
 
+using Manage.MentApi.Utility.InitDatabaseExt;
 using Manage.MentApi.Utility.SwaggerExt;
 
 namespace Manage.MentApi
@@ -15,7 +16,13 @@ namespace Manage.MentApi
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
+            if (builder.Configuration["IsInitDatabase"] == "1")
+            {
+                //配置SqlSugar--初始化数据库
+                //项目首次启动--要初始化
+                builder.InitDatabase();
+            }
+            builder.InitSqlSugar(); //初始化SqlSugar-注册到IOC容器
             // Add services to the container.
             builder.Services.AddControllers();
             //swgger配置
