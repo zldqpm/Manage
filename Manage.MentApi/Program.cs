@@ -1,4 +1,6 @@
 
+using Manage.BusinessInterface;
+using Manage.BusinessService;
 using Manage.MentApi.Utility.InitDatabaseExt;
 using Manage.MentApi.Utility.SwaggerExt;
 
@@ -27,7 +29,7 @@ namespace Manage.MentApi
             builder.Services.AddControllers();
             //swgger配置
             builder.AddSwaggerExt();
-
+            builder.Services.AddTransient<IUserService, UserService>();
             var app = builder.Build();
             // 是否只在开发环境启动swggerUI 这里是所有环境都可以显示
             //if (app.Environment.IsDevelopment())

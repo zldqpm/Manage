@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Manage.MentApi", "Manage.Me
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manage.Models", "Manage.Models\Manage.Models.csproj", "{FE7EB1AB-29F0-45D0-BFFE-06DBFDC7BA07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manage.BusinessInterface", "Manage.BusinessInterface\Manage.BusinessInterface.csproj", "{225CFD19-E355-4D7D-B2A3-C8657495C10A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manage.BusinessService", "Manage.Service\Manage.BusinessService.csproj", "{8B82A290-1F11-4C89-B87A-93F7C1128E2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{FE7EB1AB-29F0-45D0-BFFE-06DBFDC7BA07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE7EB1AB-29F0-45D0-BFFE-06DBFDC7BA07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE7EB1AB-29F0-45D0-BFFE-06DBFDC7BA07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{225CFD19-E355-4D7D-B2A3-C8657495C10A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{225CFD19-E355-4D7D-B2A3-C8657495C10A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{225CFD19-E355-4D7D-B2A3-C8657495C10A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{225CFD19-E355-4D7D-B2A3-C8657495C10A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B82A290-1F11-4C89-B87A-93F7C1128E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B82A290-1F11-4C89-B87A-93F7C1128E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B82A290-1F11-4C89-B87A-93F7C1128E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B82A290-1F11-4C89-B87A-93F7C1128E2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
