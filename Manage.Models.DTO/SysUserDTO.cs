@@ -1,22 +1,21 @@
-﻿using SqlSugar;
+﻿using Manage.Common.ValidateRules;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Manage.Models.Entity
+namespace Manage.Models.DTO
 {
     /// <summary>
     ///  用户信息
-    /// </summary>
-    [SugarTable("Sys_User")]
-    public class Sys_User : Sys_BaseModel
+    /// </summary> 
+    public class SysUserDTO : BaseDTO
     {
-        [SugarColumn(ColumnName = "UserId", IsIdentity = true, IsPrimaryKey = true)]
         public int UserId { get; set; }
 
+
+        [CustomRequiredAttribute("用户名称不能为空")]
         public string? Name { set; get; }
 
         public string? Password { set; get; }
@@ -30,10 +29,12 @@ namespace Manage.Models.Entity
 
         public string? Mobile { set; get; }
 
+        [CustomRequiredAttribute("用户地址不为空")]
         public string? Address { set; get; }
 
         public string? Email { set; get; }
 
+        [CustomValueIsNumAttribute("QQ号必须微数字")]
         public long QQ { set; get; }
 
         public string? WeChat { set; get; }

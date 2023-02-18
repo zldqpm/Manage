@@ -9,8 +9,6 @@ using Manage.BusinessInterface;
 
 namespace Manage.BusinessService
 {
-
-
     /// <summary>
     /// 提供的就是业务逻辑的基础实现
     /// 提供的公共逻辑--最好不要直接使用，通过继承来调用

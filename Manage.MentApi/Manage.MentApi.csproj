@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Manage.BusinessInterface\Manage.BusinessInterface.csproj" />
+    <ProjectReference Include="..\Manage.Models.DTO\Manage.Models.DTO.csproj" />
     <ProjectReference Include="..\Manage.Models\Manage.Models.csproj" />
     <ProjectReference Include="..\Manage.Service\Manage.BusinessService.csproj" />
   </ItemGroup>
