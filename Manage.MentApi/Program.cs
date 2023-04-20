@@ -1,5 +1,6 @@
 
 using Manage.BusinessInterface;
+using Manage.BusinessInterface.MapConfig;
 using Manage.BusinessService;
 using Manage.MentApi.Utility.InitDatabaseExt;
 using Manage.MentApi.Utility.SwaggerExt;
@@ -30,13 +31,14 @@ namespace Manage.MentApi
             //swgger配置
             builder.AddSwaggerExt();
             builder.Services.AddTransient<IUserService, UserService>();
+            //Automapper映射
+            builder.Services.AddAutoMapper(typeof(AutoMapperConfigs));
             var app = builder.Build();
             // 是否只在开发环境启动swggerUI 这里是所有环境都可以显示
             //if (app.Environment.IsDevelopment())
             //{
             app.UseSwaggerExt();
             //}
-
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();
