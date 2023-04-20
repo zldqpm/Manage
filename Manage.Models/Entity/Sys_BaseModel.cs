@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SqlSugar;
 
 namespace Manage.Models.Entity
 {
@@ -11,6 +7,11 @@ namespace Manage.Models.Entity
     /// </summary>
     public abstract class Sys_BaseModel
     {
+        /// <summary>
+        /// 主键Id
+        /// </summary>
+        [SugarColumn(IsPrimaryKey = true)]
+        public Guid Id { get; set; }
         /// <summary>
         /// 创建时间
         /// </summary>

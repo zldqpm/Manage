@@ -1,10 +1,4 @@
 ﻿using SqlSugar;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Manage.Models.Entity
 {
@@ -14,9 +8,6 @@ namespace Manage.Models.Entity
     [SugarTable("Sys_User")]
     public class Sys_User : Sys_BaseModel
     {
-        [SugarColumn(ColumnName = "UserId", IsIdentity = true, IsPrimaryKey = true)]
-        public int UserId { get; set; }
-
         public string? Name { set; get; }
 
         public string? Password { set; get; }

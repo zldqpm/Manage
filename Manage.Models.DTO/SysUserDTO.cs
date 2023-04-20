@@ -12,7 +12,7 @@ namespace Manage.Models.DTO
     /// </summary> 
     public class SysUserDTO : BaseDTO
     {
-        public int UserId { get; set; }
+        public Guid Id { get; set; }
 
 
         [CustomRequiredAttribute("用户名称不能为空")]

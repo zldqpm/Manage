@@ -1,9 +1,4 @@
 ﻿using SqlSugar;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Manage.Models.Entity
 {
@@ -22,12 +17,6 @@ namespace Manage.Models.Entity
     [SugarTable("Sys_Menu")]
     public class Sys_Menu : Sys_BaseModel
     {
-        /// <summary>
-        /// 主键Id
-        /// </summary>
-        [SugarColumn(IsPrimaryKey = true)]
-        public Guid Id { get; set; }
-
         /// <summary>
         /// 父级Id
         /// </summary>

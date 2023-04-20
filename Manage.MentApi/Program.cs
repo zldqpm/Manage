@@ -3,6 +3,7 @@ using Manage.BusinessInterface;
 using Manage.BusinessInterface.MapConfig;
 using Manage.BusinessService;
 using Manage.MentApi.Utility.InitDatabaseExt;
+using Manage.MentApi.Utility.RegisterExt;
 using Manage.MentApi.Utility.SwaggerExt;
 
 namespace Manage.MentApi
@@ -27,6 +28,7 @@ namespace Manage.MentApi
             }
             builder.InitSqlSugar(); //≥ı ºªØSqlSugar-◊¢≤·µΩIOC»›∆˜
             // Add services to the container.
+            builder.CrosDomainsPolicy(); //≈‰÷√øÁ”Ú
             builder.Services.AddControllers();
             //swgger≈‰÷√
             builder.AddSwaggerExt();
@@ -39,6 +41,7 @@ namespace Manage.MentApi
             //{
             app.UseSwaggerExt();
             //}
+            app.UseCrosDomainsPolicy();// π”√øÁ”Ú≤ﬂ¬‘
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();

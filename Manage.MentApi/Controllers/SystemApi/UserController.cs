@@ -40,7 +40,7 @@ namespace Manage.MentApi.Controllers.SystemApi
         {
             Expressionable<Sys_User> expressionable = new Expressionable<Sys_User>();
             expressionable.AndIF(!string.IsNullOrWhiteSpace(searchaString), u => u.Name.Contains(searchaString));
-            PagingData<Sys_User> paging = userService.QueryPage<Sys_User>(expressionable.ToExpression(), pageSize, pageindex, c => c.UserId, false);
+            PagingData<Sys_User> paging = userService.QueryPage<Sys_User>(expressionable.ToExpression(), pageSize, pageindex, c => c.CreateTime, false);
 
             ApiDataResult<PagingData<SysUserDTO>> result = new ApiDataResult<PagingData<SysUserDTO>>()
             {
